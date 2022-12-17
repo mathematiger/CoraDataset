@@ -13,7 +13,7 @@ Main Idea from first Paper: Find secondary features and train a new classifier f
 
 Main Idea from second paper: During ICA, update the nodes only based on a classifier trained and evaluated on "local" connections of this node
     
-    
+My main "own" Contribution: Instead of using count-link from the first paper (counting adjacent nodes of the same label and hence creating 7 new features (as there are 7 possible different labels), I use "Normalized Count-link" and only count outgoing links of a node (papers, which are cited by the paper of the node, coming from the idea "The topic of the paper is probably what the paper is based on and not, in which topic the paper is used"), and instead of counting weight "1" for each paper, I count like in page-rank "1/papers which cite this paper".
     
 The setup: There is a 10-crossfold validation, where 9 sets are used to train an algorithm which predicts the labels of the tenth set. The scoring is measured by subset accuracy.
 
